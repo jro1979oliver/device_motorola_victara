@@ -23,19 +23,12 @@ import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceFragment;
 
 public class ActionsGesturePreferenceFragment extends PreferenceFragment {
-    private static final String CATEGORY_AMBIENT_DISPLAY = "ambient_display_key";
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         addPreferencesFromResource(R.xml.actions_panel);
         final ActionBar actionBar = getActivity().getActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
-        PreferenceCategory ambientDisplayCat = (PreferenceCategory)
-                findPreference(CATEGORY_AMBIENT_DISPLAY);
-        if (ambientDisplayCat != null) {
-            ambientDisplayCat.setEnabled(LineageActionsSettings.isDozeEnabled(getActivity().getContentResolver()));
-        }
-    }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

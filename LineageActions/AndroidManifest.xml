@@ -39,6 +39,12 @@
                   android:windowAnimationStyle="@null">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+            android:name=".DozePreferenceActivity"
+            android:label="@string/ambient_display_title"
+            android:theme="@style/LineageActions">
+            <intent-filter>
+                <action android:name="org.lineageos.settings.device.DOZE_SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
 
