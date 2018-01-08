@@ -281,6 +281,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.renderscript@1.0-impl
 
+# Qualcomm® aptX™
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.bt.enableAptXHD=true \
+    persist.service.btui.use_aptx=1 \
+    persistent.bt.a2dp_offload_cap=sbc-aptx-aptXHD
+
 # RIL
 PRODUCT_PACKAGES += \
     libqsap_shim
