@@ -57,6 +57,12 @@ ro.vendor.qti.sys.fw.bservice_enable=true
 ## QCOM
 ro.vendor.extension_library=/vendor/lib/libqc-opt.so
 
+# Qualcomm® aptX™
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.bt.enableAptXHD=true \
+    persist.service.btui.use_aptx=1 \
+    persistent.bt.a2dp_offload_cap=sbc-aptx-aptXHD
+
 ## RIL
 DEVICE_PROVISIONED=1
 persist.data.netmgrd.qos.enable=true
