@@ -25,6 +25,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     qcom.bluetooth.soc=smd
 
+# Qualcomm® aptX™
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.bt.enableAptXHD=true \
+    persist.service.btui.use_aptx=1 \
+    persistent.bt.a2dp_offload_cap=sbc-aptx-aptXHD
+
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \
     camera2.portability.force_api=1
