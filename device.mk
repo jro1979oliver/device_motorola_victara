@@ -58,6 +58,7 @@ PRODUCT_COPY_FILES += \
 # Bluetooth
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0-impl \
+    android.hardware.bluetooth@1.0-service \
     libbt-vendor
 
 # Boot animation
@@ -101,6 +102,7 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.composer@2.1-service \
     android.hardware.memtrack@1.0-impl \
     copybit.msm8974 \
+    android.hardware.memtrack@1.0-service \
     gralloc.msm8974 \
     hwcomposer.msm8974 \
     libgenlock \
