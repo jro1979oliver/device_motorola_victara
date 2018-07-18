@@ -295,6 +295,10 @@ PRODUCT_PACKAGES += \
     init.recovery.qcom.rc \
     init.target.rc \
     ueventd.qcom.rc
+# RIL
+PRODUCT_PACKAGES += \
+    libril-wrapper
+
 # RenderScript HAL
 PRODUCT_PACKAGES += \
     android.hardware.renderscript@1.0-impl
