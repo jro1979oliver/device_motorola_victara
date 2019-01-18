@@ -97,6 +97,9 @@ TARGET_FS_CONFIG_GEN := \
     $(DEVICE_PATH)/fs_config/mot_aids.fs \
     $(DEVICE_PATH)/fs_config/config.fs
 
+# Display
+TARGET_SCREEN_DENSITY := 480
+
 # HIDL
 DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
 
