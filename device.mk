@@ -385,6 +385,10 @@ PRODUCT_PACKAGES += \
     LineageActions \
     libjni_LineageActions
 
+# LiveDisplay
+PRODUCT_PACKAGES += \
+    vendor.lineage.livedisplay@2.0-service-sysfs
+
 # Keymaster HIDL interfaces
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@3.0-impl
