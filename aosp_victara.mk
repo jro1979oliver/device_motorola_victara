@@ -9,6 +9,7 @@ $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := victara
+BUILD_FINGERPRINT := motorola/victara_tmo/victara:5.1/LPE23.32-21.3/5:user/release-keys
 PRODUCT_NAME := aosp_victara
 PRODUCT_BRAND := motorola
 PRODUCT_MODEL := MOTO X (2014)
@@ -16,13 +17,6 @@ PRODUCT_RELEASE_NAME := victara
 PRODUCT_MANUFACTURER := motorola
 
 PRODUCT_GMS_CLIENTID_BASE := android-motorola
-
-BUILD_FINGERPRINT := "motorola/victara_tmo/victara:5.1/LPE23.32-21.3/5:user/release-keys"
-
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRODUCT_NAME=victara \
-    TARGET_DEVICE="victara"
-    PRIVATE_BUILD_DESC="victara_tmo-user 5.1 LPE23.32-21.3 5 release-keys"
 
 # Use Gapps
 WITH_GAPPS := false
