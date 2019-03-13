@@ -161,6 +161,10 @@ PRODUCT_COPY_FILES += \
     device/motorola/victara/configs/hdrhax:system/vendor/etc/hdrhax \
     device/motorola/victara/configs/external_camera_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/external_camera_config.xml
 
+# Codec2 modules
+PRODUCT_PACKAGES += \
+    com.android.media.swcodec \
+    libsfplugin_ccodec
 
 # CRDA
 PRODUCT_PACKAGES += \
