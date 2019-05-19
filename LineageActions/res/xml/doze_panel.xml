@@ -44,14 +44,14 @@
             android:defaultValue="true"
             android:title="@string/pick_up_gesture_title"
             android:summary="@string/pick_up_gesture_summary"
-            android:dependency="doze_enabled" />
-
+            android:dependency="doze_enabled"
+		    android:icon="@drawable/ic_pickup" />						  
         <SwitchPreference
             android:key="gesture_ir_wake_up"
             android:defaultValue="true"
             android:title="@string/hand_wave_gesture_title"
             android:summary="@string/hand_wave_gesture_summary"
-            android:dependency="doze_enabled" />
+            android:dependency="doze_enabled"
+			android:icon="@drawable/ic_hand" />         		  
     </PreferenceCategory>
-
 </PreferenceScreen>
