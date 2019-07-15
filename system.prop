@@ -31,6 +31,9 @@ persistent.bt.a2dp_offload_cap=sbc-aptx-aptXHD
 ## Camera
 camera2.portability.force_api=1
 
+## Charger
+ro.charger.enable_suspend=true
+
 ## Dalvik
 dalvik.vm.dex2oat-swap=false
 dalvik.vm.heapgrowthlimit=192m
