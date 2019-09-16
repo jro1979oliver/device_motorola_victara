@@ -313,6 +313,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libqsap_shim
 
+# Telephony
+PRODUCT_PACKAGES += \
+    ims-ext-common_system
+
+PRODUCT_BOOT_JARS += \
+    ims-ext-common_system
+
 # Thermal
 PRODUCT_COPY_FILES += \
     device/motorola/victara/configs/thermal-engine-victara.conf:system/etc/thermal-engine-victara.conf
