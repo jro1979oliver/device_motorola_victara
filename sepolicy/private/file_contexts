@@ -1,0 +1,3 @@
+# sysfs_disk_stat labeled in sepolicy-legacy
+# /sys/devices/msm_sdcc\.[0-9]/mmc_host/mmc[0-9]/mmc[0-9]:[0-9]+/block/mmcblk[0-9]/stat                                 u:object_r:sysfs_disk_stat:s0
+# /sys/devices(/platform)?/soc(\.[0-9])?/[a-f0-9]+\.sdhci/mmc_host/mmc[0-9]/mmc[0-9]:[a-f0-9]+/block/mmcblk[0-9]/stat   u:object_r:sysfs_disk_stat:s0
