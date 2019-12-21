@@ -168,10 +168,17 @@ TARGET_USERIMAGES_USE_F2FS := true
 
 # SELinux
 include device/qcom/sepolicy-legacy/sepolicy.mk
+BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
+BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
+
+PLATFORM_SEPOLICY_VERSION_TEST := false
 
 BOARD_SEPOLICY_DIRS += device/motorola/victara/sepolicy
 
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += device/motorola/victara/sepolicy/private
+
+# SurfaceFlinger
+TARGET_USE_AOSP_SURFACEFLINGER := true
 
 # Vendor Init
 TARGET_INIT_VENDOR_LIB := libinit_victara
