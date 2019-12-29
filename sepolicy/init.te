@@ -44,3 +44,5 @@ allow init sysfs:dir create_dir_perms;
 
 
 allow init vendor_file:file execute_no_trans;
+allow init system_data_file:chr_file getattr;
+
