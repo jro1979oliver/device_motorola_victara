@@ -56,4 +56,5 @@ allow init {
 
 # Allow init to bind mount loader config for media swcodec
 allow init system_file:file mounton;
+allow init proc_cpu_alignment:file { w_file_perms };
 allow init proc_last_kmsg:file { setattr r_file_perms };
