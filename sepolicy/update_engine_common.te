@@ -1,0 +1,2 @@
+# Read files in /proc/device-tree/firmware/android
+r_dir_file(update_engine_common, proc_dt_firmware_android)

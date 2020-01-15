@@ -1,0 +1,2 @@
+# Read files in /proc
+r_dir_file(uncrypt, proc_dt_firmware_android)
