@@ -162,7 +162,6 @@ PRODUCT_COPY_FILES += \
     device/motorola/victara/configs/hdrhax:system/vendor/etc/hdrhax \
     device/motorola/victara/configs/external_camera_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/external_camera_config.xml
 
-
 # CRDA
 PRODUCT_PACKAGES += \
     crda \
@@ -271,8 +270,10 @@ PRODUCT_PACKAGES += \
     android.hardware.power@1.1-service-qti
 
 # Offmode Charging
+WITH_LINEAGE_CHARGER := false
 PRODUCT_PACKAGES += \
-    charger_res_image
+    charger_res_images \
+    product_charger_res_images
 
 # Ramdisk
 PRODUCT_PACKAGES += \
