@@ -160,8 +160,7 @@ PRODUCT_PACKAGES += \
     camera.msm8974
 
 PRODUCT_COPY_FILES += \
-    device/motorola/victara/configs/hdrhax:system/vendor/etc/hdrhax \
-    device/motorola/victara/configs/external_camera_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/external_camera_config.xml
+    device/motorola/victara/configs/hdrhax:system/vendor/etc/hdrhax
 
 # Codec2 modules
 PRODUCT_PACKAGES += \
