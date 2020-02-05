@@ -367,3 +367,10 @@ PRODUCT_PACKAGES += \
 
 # Inherit APN info from device
 PRODUCT_COPY_FILES += device/motorola/victara/configs/apns-conf.xml:system/etc/apns-conf.xml
+
+# AOSP packages
+PRODUCT_PACKAGES += \
+    Recorder \
+    Terminal \
+    messaging \
+    LatinIME
