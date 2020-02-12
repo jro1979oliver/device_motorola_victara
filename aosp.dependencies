@@ -1,0 +1,26 @@
+[
+  {
+    "remote":      "github",
+    "repository":  "Moto-X-2014-Development/android_kernel_motorola_msm8974",
+    "target_path": "kernel/motorola/msm8974",
+    "branch":      "10.x"
+  },
+  {
+    "remote":      "github",
+    "repository":  "Moto-X-2014-Development/proprietary_vendor_motorola",
+    "target_path": "vendor/motorola",
+    "branch":      "lineage-17.1"
+  },
+    {
+    "remote":      "github",
+    "repository":  "LineageOS/android_external_bson",
+    "target_path": "external/bson",
+    "branch":      "lineage-17.1"
+  },
+  {
+    "remote":      "github",
+    "repository":  "LineageOS/android_hardware_broadcom_nfc",
+    "target_path": "hardware/broadcom/nfc",
+    "branch":      "lineage-17.1"
+  }  
+]
