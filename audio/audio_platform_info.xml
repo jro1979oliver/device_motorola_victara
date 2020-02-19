@@ -36,6 +36,7 @@
         <device name="SND_DEVICE_IN_VOICE_DMIC" acdb_id="6"/>
         <device name="SND_DEVICE_IN_VOICE_DMIC_TMUS" acdb_id="6"/>
         <device name="SND_DEVICE_IN_HEADSET_MIC_AEC" acdb_id="47"/>
+        <device name="SND_DEVICE_IN_CAMCORDER_MIC" acdb_id="34"/>
     </acdb_ids>
     <backend_names>
         <device name="SND_DEVICE_OUT_SPEAKER" backend="speaker-and-headphones" interface="QUAT_MI2S_RX-and-SLIMBUS_0_RX"/>
@@ -59,6 +60,10 @@
         <!-- If sound card name is not known, remove this entry -->
         <param key="snd_card_name" value="msm8974-taiko-tfa9890_codec-snd-card"/>
     </config_params>
+
+<device_names>
+	<device name="SND_DEVICE_IN_CAMCORDER_MIC" alias="handset-stereo-dmic-ef"/>
+</device_names>
 
 </audio_platform_info>
 
