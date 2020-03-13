@@ -15,7 +15,7 @@
 //
 
 cc_library_static {
-    name: "libinit_victara",
+    name: "libinit_ghost",
     recovery_available: true,
     srcs: ["init_victara.cpp"],
     include_dirs: [

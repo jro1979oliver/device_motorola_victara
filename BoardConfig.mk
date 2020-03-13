@@ -15,28 +15,28 @@
 # limitations under the License.
 
 # inherit from the proprietary version
--include vendor/motorola/victara/BoardConfigVendor.mk
+-include vendor/motorola/ghost/BoardConfigVendor.mk
 
-LOCAL_PATH := device/motorola/victara
+LOCAL_PATH := device/motorola/ghost
 
 BOARD_VENDOR := motorola-qcom
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := victara
+TARGET_OTA_ASSERT_DEVICE := ghost
 
 # Filesystem
 TARGET_ALLOW_LEGACY_AIDS := true
 TARGET_FS_CONFIG_GEN := \
-    device/motorola/victara/fs_config/mot_aids.fs \
-    device/motorola/victara/fs_config/config.fs
+    device/motorola/ghost/fs_config/mot_aids.fs \
+    device/motorola/ghost/fs_config/config.fs
 
 # Platform
-TARGET_BOARD_PLATFORM := msm8974
-TARGET_BOARD_PLATFORM_GPU := qcom-adreno330
+TARGET_BOARD_PLATFORM := msm8960
+TARGET_BOARD_PLATFORM_GPU := qcom-adreno320
 BOARD_USES_QCOM_HARDWARE := true
 
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := MSM8974
+TARGET_BOOTLOADER_BOARD_NAME := MSM8960
 TARGET_NO_BOOTLOADER := true
 
 # Architecture
@@ -59,7 +59,7 @@ BOARD_KERNEL_SEPARATED_DT := true
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02000000 --tags_offset 0x01e00000
 LZMA_RAMDISK_TARGETS := boot,recovery
 TARGET_KERNEL_SOURCE := kernel/motorola/msm8974
-TARGET_KERNEL_CONFIG := lineageos_victara_defconfig
+TARGET_KERNEL_CONFIG := lineageos_ghost_defconfig
 BOARD_KERNEL_IMAGE_NAME := zImage
 
 # Kernel Toolchain
@@ -104,7 +104,7 @@ TARGET_PROCESS_SDK_VERSION_OVERRIDE += \
     /system/vendor/bin/mm-qcamera-daemon=22
 
 # Bluetooth
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/motorola/victara/bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/motorola/ghost/bluetooth
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_QCOM := true
 BLUETOOTH_HCI_USE_MCT := true
@@ -137,10 +137,10 @@ EXTENDED_FONT_FOOTPRINT := true
 USE_DEVICE_SPECIFIC_GPS := true
 
 # Hardware
-BOARD_HARDWARE_CLASS := device/motorola/victara/lineagehw
+BOARD_HARDWARE_CLASS := device/motorola/ghost/lineagehw
 
 # HIDL
-DEVICE_MANIFEST_FILE := device/motorola/victara/configs/manifest.xml
+DEVICE_MANIFEST_FILE := device/motorola/ghost/configs/manifest.xml
 
 # Init
 TARGET_NR_SVC_SUPP_GIDS := 32
@@ -163,22 +163,22 @@ BOARD_NO_SECURE_DISCARD := true
 BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_RECOVERY_SWIPE := true
 TARGET_RECOVERY_DENSITY := hdpi
-TARGET_RECOVERY_FSTAB := device/motorola/victara/rootdir/etc/fstab.qcom
+TARGET_RECOVERY_FSTAB := device/motorola/ghost/rootdir/etc/fstab.qcom
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 
 # SELinux
 include device/qcom/sepolicy-legacy/sepolicy.mk
-BOARD_SEPOLICY_DIRS += device/motorola/victara/sepolicy
-BOARD_PLAT_PRIVATE_SEPOLICY_DIR += device/motorola/victara/sepolicy/private
-BOARD_SEPOLICY_DIRS += device/motorola/victara/sepolicy
+BOARD_SEPOLICY_DIRS += device/motorola/ghost/sepolicy
+BOARD_PLAT_PRIVATE_SEPOLICY_DIR += device/motorola/ghost/sepolicy/private
+BOARD_SEPOLICY_DIRS += device/motorola/ghost/sepolicy
 
 # SurfaceFlinger
 TARGET_USE_AOSP_SURFACEFLINGER := true
 
 # Vendor Init
-TARGET_INIT_VENDOR_LIB := libinit_victara
-TARGET_RECOVERY_DEVICE_MODULES := libinit_victara
+TARGET_INIT_VENDOR_LIB := libinit_ghost
+TARGET_RECOVERY_DEVICE_MODULES := libinit_ghost
 
 # Vold
 BOARD_VOLD_DISC_HAS_MULTIPLE_MAJORS := true
