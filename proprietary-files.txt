@@ -19,8 +19,8 @@ etc/firmware/VRGain.bin
 bin/adspd
 
 # Bluetooth
-bin/btnvtool:vendor/bin/btnvtool
-bin/hci_qcomm_init:vendor/bin/hci_qcomm_init
+vendor/bin/btnvtool
+vendor/bin/hci_qcomm_init
 vendor/lib/libbtnv.so
 
 # Camera
@@ -121,14 +121,14 @@ vendor/lib/libchromatix_s5k4e1_default_video.so
 vendor/lib/libchromatix_s5k4e1_preview.so
 
 # CPU
-bin/thermald
+vendor/bin/thermald
 lib/libqc-opt.so
-vendor/lib/libqti-perfd-client.so
+vendor/lib/libqti-perfd-client.so #missing
 
 # Security
-bin/qseecomd:vendor/bin/qseecomd
-vendor/lib/libssd.so
-vendor/lib/librpmb.so
+vendor/bin/qseecomd
+vendor/lib/libssd.so #missing
+vendor/lib/librpmb.so #missing
 vendor/lib/libdrmfs.so
 vendor/lib/libdrmtime.so
 vendor/lib/libQSEEComAPI.so
@@ -169,9 +169,9 @@ vendor/lib/libRSDriver_adreno.so
 vendor/lib/libsc-a3xx.so
 
 # IMS - currently unused but have dependencies to qmi
-bin/imsdatadaemon
-bin/imsqmidaemon
-bin/ims_rtp_daemon
+vendor/bin/imsdatadaemon
+vendor/bin/imsqmidaemon
+vendor/bin/ims_rtp_daemon
 lib/libmmrtpencoder.so
 vendor/lib/lib-dplmedia.so
 vendor/lib/lib-imsdpl.so
@@ -240,15 +240,15 @@ vendor/lib/libqmi_common_so.so
 vendor/lib/libqmi_encdec.so
 
 # Radio
-bin/bootmodem
-bin/efsks
-bin/ks
-bin/netmgrd:vendor/bin/netmgrd
-bin/qcks
-bin/qmi_motext_hook
-bin/qmuxd:vendor/bin/qmuxd
-bin/rild
-bin/rmt_storage:vendor/bin/rmt_storage
+vendor/bin/bootmodem
+vendor/bin/efsks
+vendor/bin/ks
+vendor/bin/netmgrd:vendor/bin/netmgrd
+vendor/bin/qcks
+vendor/bin/qmi_motext_hook
+vendor/bin/qmuxd:vendor/bin/qmuxd
+vendor/bin/rild
+vendor/bin/rmt_storage:vendor/bin/rmt_storage
 vendor/lib/libadropbox.so
 vendor/lib/libmdmcutback.so
 vendor/lib/libmotext_inf.so
@@ -269,7 +269,7 @@ etc/firmware/synaptics-s3402b-13050201-167746-ghost.tdat
 
 # Time services
 -app/TimeService/TimeService.apk
-bin/time_daemon:vendor/bin/time_daemon
+vendor/bin/time_daemon
 -lib/libtime_genoff.so
 lib/libTimeService.so
 
