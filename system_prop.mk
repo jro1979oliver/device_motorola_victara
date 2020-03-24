@@ -106,3 +106,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.disableWifiApFirmwareReload=true
 
+# Havoc
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.havoc.maintainer=jro1979
