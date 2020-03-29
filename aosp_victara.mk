@@ -2,7 +2,7 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit some common aosp stuff.
-$(call inherit-product, vendor/aosp/common.mk)
+$(call inherit-product, vendor/pa/config/common_full_phone.mk)
 
 # Inherit from victara device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
