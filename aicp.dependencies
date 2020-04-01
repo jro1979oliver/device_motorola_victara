@@ -11,7 +11,7 @@
     "target_path": "vendor/motorola",
     "branch":      "lineage-17.1"
   },
-    {
+  {
     "remote":      "github",
     "repository":  "LineageOS/android_external_bson",
     "target_path": "external/bson",
