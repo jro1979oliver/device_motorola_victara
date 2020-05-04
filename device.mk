@@ -78,6 +78,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/camera/hdrhax:$(TARGET_COPY_OUT_VENDOR)/etc/hdrhax
 
+TARGET_USES_QTI_CAMERA_DEVICE := true
+
 # Charateristics
 PRODUCT_CHARACTERISTICS := nosdcard
 
