@@ -30,6 +30,7 @@
             android:summary="@string/camera_gesture_summary"
             android:entries="@array/action_entries"
             android:entryValues="@array/action_values" />
+            android:icon="@drawable/ic_actions_twist" />
 
         <SwitchPreference
             android:key="gesture_chop_chop"
@@ -38,7 +39,8 @@
             android:dialogTitle="@string/chop_chop_gesture_title"
             android:summary="@string/chop_chop_gesture_summary"
             android:entries="@array/action_entries"
-            android:entryValues="@array/action_values" />
+            android:entryValues="@array/action_values"
+            android:icon="@drawable/ic_actions_chop" />
 
         <SwitchPreference
             android:key="gesture_feedback_intensity"
@@ -47,13 +49,15 @@
             android:dialogTitle="@string/feedback_intensity_title"
             android:summary="@string/feedback_intensity_summary"
             android:entries="@array/feedback_intensity_entries"
-            android:entryValues="@array/feedback_intensity_values" />
+            android:entryValues="@array/feedback_intensity_values"
+	    android:icon="@drawable/ic_actions_flip" />
 
         <SwitchPreference
             android:key="gesture_ir_silencer"
             android:defaultValue="true"
             android:title="@string/hand_wave_silencer_title"
-            android:summary="@string/hand_wave_silencer_summary" />
+            android:summary="@string/hand_wave_silencer_summary"
+            android:icon="@drawable/ic_actions_wave" />
 
     </PreferenceCategory>
 
