@@ -32,4 +32,13 @@
 
     <!-- Doze: pulse parameter - delay to wait for the screen to wake up after an intent -->
     <integer name="doze_pulse_delay_in_intent">0</integer>
+
+    <!-- LockScreenCharger current inversion -->
+    <bool name="showInvertedCurrent">false</bool>
+
+    <!-- LockScreenCharger current sysfs path -->
+    <string name="config_currentPath">/sys/class/power_supply/battery/current_now</string>
+
+    <!-- LockScreenCharger voltage sysfs path -->
+    <string name="config_voltagePath">/sys/class/power_supply/battery/voltage_now</string>
 </resources>
