@@ -2,7 +2,7 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit some common aosp stuff.
-$(call inherit-product, vendor/aosp/common.mk)
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
 # Inherit from victara device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
@@ -19,7 +19,7 @@ PRODUCT_MANUFACTURER := motorola
 PRODUCT_GMS_CLIENTID_BASE := android-motorola
 
 # Use Gapps
-WITH_GAPPS := false
+WITH_GAPPS := true
 TARGET_GAPPS_ARCH := arm
 IS_PHONE := true
 
