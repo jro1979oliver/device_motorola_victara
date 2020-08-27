@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package com.lineageos.settings.device;
+package org.lineageos.settings.device;
 
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.util.Log;
 
-import static com.lineageos.settings.device.IrGestureManager.*;
+import static org.lineageos.settings.device.IrGestureManager.*;
 
 public class IrGestureSensor implements ScreenStateNotifier, SensorEventListener {
     private static final String TAG = "LineageActions-IRGestureSensor";

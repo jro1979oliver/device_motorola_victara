@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.lineageos.settings.device;
+package org.lineageos.settings.device;
 
 import java.util.List;
 
@@ -24,33 +24,35 @@ import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.util.Log;
 
-public class ChopChopSensor implements SensorEventListener, UpdatedStateNotifier {
-    private static final String TAG = "LineageActions-ChopChopSensor";
+public class CameraActivationSensor implements SensorEventListener, UpdatedStateNotifier {
+    private static final String TAG = "LineageActions-CameraSensor";
 
     private static final int TURN_SCREEN_ON_WAKE_LOCK_MS = 500;
 
     private final LineageActionsSettings mLineageActionsSettings;
     private final SensorAction mAction;
     private final SensorHelper mSensorHelper;
+
     private final Sensor mSensor;
 
     private boolean mIsEnabled;
 
-    public ChopChopSensor(LineageActionsSettings cmActionsSettings, SensorAction action,
+    public CameraActivationSensor(LineageActionsSettings cmActionsSettings, SensorAction action,
         SensorHelper sensorHelper) {
         mLineageActionsSettings = cmActionsSettings;
         mAction = action;
         mSensorHelper = sensorHelper;
-        mSensor = sensorHelper.getChopChopSensor();
+
+        mSensor = sensorHelper.getCameraActivationSensor();
     }
 
     @Override
     public synchronized void updateState() {
-        if (mLineageActionsSettings.isChopChopGestureEnabled() && !mIsEnabled) {
+        if (mLineageActionsSettings.isCameraGestureEnabled() && !mIsEnabled) {
             Log.d(TAG, "Enabling");
             mSensorHelper.registerListener(mSensor, this);
             mIsEnabled = true;
-        } else if (! mLineageActionsSettings.isChopChopGestureEnabled() && mIsEnabled) {
+        } else if (! mLineageActionsSettings.isCameraGestureEnabled() && mIsEnabled) {
             Log.d(TAG, "Disabling");
             mSensorHelper.unregisterListener(this);
             mIsEnabled = false;
@@ -59,7 +61,7 @@ public class ChopChopSensor implements SensorEventListener, UpdatedStateNotifier
 
     @Override
     public void onSensorChanged(SensorEvent event) {
-        Log.d(TAG, "chop chop triggered");
+        Log.d(TAG, "activate camera");
         mAction.action();
     }
 

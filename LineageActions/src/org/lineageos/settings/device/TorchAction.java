@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.lineageos.settings.device;
+package org.lineageos.settings.device;
 
 import android.content.Context;
 import android.hardware.camera2.CameraManager;

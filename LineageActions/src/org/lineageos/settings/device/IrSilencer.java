@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.lineageos.settings.device;
+package org.lineageos.settings.device;
 
 import android.content.Context;
 import android.hardware.Sensor;
@@ -25,7 +25,7 @@ import android.telecom.TelecomManager;
 import android.telephony.TelephonyManager;
 import android.util.Log;
 
-import static com.lineageos.settings.device.IrGestureManager.*;
+import static org.lineageos.settings.device.IrGestureManager.*;
 import static android.telephony.TelephonyManager.*;
 
 public class IrSilencer extends PhoneStateListener implements SensorEventListener, UpdatedStateNotifier {

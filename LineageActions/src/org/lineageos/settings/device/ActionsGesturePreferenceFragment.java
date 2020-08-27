@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.lineageos.settings.device;
+package org.lineageos.settings.device;
 
 import android.app.ActionBar;
 import android.os.Bundle;
@@ -22,12 +22,12 @@ import android.view.MenuItem;
 import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceFragment;
 
-public class TouchscreenGesturePreferenceFragment extends PreferenceFragment {
+public class ActionsGesturePreferenceFragment extends PreferenceFragment {
     private static final String CATEGORY_AMBIENT_DISPLAY = "ambient_display_key";
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
-        addPreferencesFromResource(R.xml.gesture_panel);
+        addPreferencesFromResource(R.xml.actions_panel);
         final ActionBar actionBar = getActivity().getActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
         PreferenceCategory ambientDisplayCat = (PreferenceCategory)

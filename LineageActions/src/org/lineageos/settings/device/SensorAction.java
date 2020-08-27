@@ -14,9 +14,8 @@
  * limitations under the License.
  */
 
-package com.lineageos.settings.device;
+package org.lineageos.settings.device;
 
-interface ScreenStateNotifier {
-    public void screenTurnedOn();
-    public void screenTurnedOff();
+interface SensorAction {
+    public void action();
 }

@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.lineageos.settings.device;
+package org.lineageos.settings.device;
 
-import com.lineageos.settings.device.ServiceWrapper.LocalBinder;
+import org.lineageos.settings.device.ServiceWrapper.LocalBinder;
 
 import android.content.BroadcastReceiver;
 import android.content.ComponentName;
@@ -34,7 +34,7 @@ public class BootCompletedReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(final Context context, Intent intent) {
         Log.i(TAG, "Booting");
-        enableComponent(context, TouchscreenGesturePreferenceFragment.class.getName());
+        enableComponent(context, ActionsGesturePreferenceFragment.class.getName());
         context.startService(new Intent(context, ServiceWrapper.class));
     }
 

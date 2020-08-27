@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.lineageos.settings.device;
+package org.lineageos.settings.device;
 
 import android.content.Context;
 import android.hardware.Sensor;
@@ -28,7 +28,7 @@ import android.app.KeyguardManager;
 
 import android.util.Log;
 
-import static com.lineageos.settings.device.IrGestureManager.*;
+import static org.lineageos.settings.device.IrGestureManager.*;
 
 public class UserAwareDisplay implements ScreenStateNotifier {
     private static final String TAG = "LineageActions-UAD";

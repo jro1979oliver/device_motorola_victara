@@ -14,55 +14,59 @@
  * limitations under the License.
  */
 
-package com.lineageos.settings.device;
-
-import java.util.List;
+package org.lineageos.settings.device;
 
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
-import android.hardware.SensorManager;
 import android.util.Log;
 
-public class CameraActivationSensor implements SensorEventListener, UpdatedStateNotifier {
-    private static final String TAG = "LineageActions-CameraSensor";
-
-    private static final int TURN_SCREEN_ON_WAKE_LOCK_MS = 500;
+public class StowSensor implements ScreenStateNotifier, SensorEventListener {
+    private static final String TAG = "LineageActions-StowSensor";
 
     private final LineageActionsSettings mLineageActionsSettings;
-    private final SensorAction mAction;
     private final SensorHelper mSensorHelper;
-
+    private final SensorAction mSensorAction;
     private final Sensor mSensor;
 
-    private boolean mIsEnabled;
+    private boolean mEnabled;
+    private boolean mLastStowed;
 
-    public CameraActivationSensor(LineageActionsSettings cmActionsSettings, SensorAction action,
-        SensorHelper sensorHelper) {
+    public StowSensor(LineageActionsSettings cmActionsSettings, SensorHelper sensorHelper,
+                SensorAction action) {
         mLineageActionsSettings = cmActionsSettings;
-        mAction = action;
         mSensorHelper = sensorHelper;
+        mSensorAction = action;
 
-        mSensor = sensorHelper.getCameraActivationSensor();
+        mSensor = sensorHelper.getStowSensor();
     }
 
     @Override
-    public synchronized void updateState() {
-        if (mLineageActionsSettings.isCameraGestureEnabled() && !mIsEnabled) {
-            Log.d(TAG, "Enabling");
-            mSensorHelper.registerListener(mSensor, this);
-            mIsEnabled = true;
-        } else if (! mLineageActionsSettings.isCameraGestureEnabled() && mIsEnabled) {
+    public void screenTurnedOn() {
+        if (mEnabled) {
             Log.d(TAG, "Disabling");
             mSensorHelper.unregisterListener(this);
-            mIsEnabled = false;
+            mEnabled = false;
+        }
+    }
+
+    @Override
+    public void screenTurnedOff() {
+        if (mLineageActionsSettings.isPickUpEnabled() && !mEnabled) {
+            Log.d(TAG, "Enabling");
+            mSensorHelper.registerListener(mSensor, this);
+            mEnabled = true;
         }
     }
 
     @Override
     public void onSensorChanged(SensorEvent event) {
-        Log.d(TAG, "activate camera");
-        mAction.action();
+        boolean thisStowed = (event.values[0] != 0);
+        Log.d(TAG, "event: " + thisStowed);
+        if (mLastStowed && ! thisStowed) {
+            mSensorAction.action();
+        }
+        mLastStowed = thisStowed;
     }
 
     @Override
