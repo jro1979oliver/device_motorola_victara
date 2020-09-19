@@ -292,7 +292,8 @@ PRODUCT_PACKAGES += \
 
 # RIL
 PRODUCT_PACKAGES += \
-    libqsap_shim
+    libqsap_shim \
+    libaudioclient_shim
 
 # RRO
 PRODUCT_ENFORCE_RRO_TARGETS := \
