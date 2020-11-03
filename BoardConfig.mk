@@ -112,6 +112,7 @@ TARGET_HAS_MEMFD_BACKPORT := true
 BOARD_CUSTOM_BOOTIMG := true
 BOARD_KERNEL_BASE := 0x80200000
 BOARD_KERNEL_CMDLINE := console=none androidboot.hardware=qcom ehci-hcd.park=3 vmalloc=400M
+BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 BOARD_KERNEL_IMAGE_NAME := zImage
 BOARD_KERNEL_LZ4C_DT := true
 BOARD_KERNEL_PAGESIZE := 2048
@@ -143,9 +144,9 @@ TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 
 # SELinux
-include device/qcom/sepolicy-legacy/sepolicy.mk
-BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
-BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
+#include device/qcom/sepolicy-legacy/sepolicy.mk
+#BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
+BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy-minimal
 
 # Vendor
 -include vendor/motorola/victara/BoardConfigVendor.mk

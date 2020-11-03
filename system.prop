@@ -93,3 +93,6 @@ ro.lineage.build.vendor_security_patch=2016-08-01
 
 ## Wifi
 ro.disableWifiApFirmwareReload=true
+
+# Priv-app permissions
+ro.control_privapp_permissions=log

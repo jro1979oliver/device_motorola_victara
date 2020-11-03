@@ -347,7 +347,6 @@ service start_hci_filter /system/bin/wcnss_filter
     writepid /dev/cpuset/system-background/tasks
 
 service config_bluetooth /vendor/bin/init.qcom.bt.sh "onboot"
-    seclabel u:r:bluetooth_loader:s0
     user bluetooth
     group bluetooth net_bt_admin
     oneshot
@@ -355,7 +354,6 @@ service config_bluetooth /vendor/bin/init.qcom.bt.sh "onboot"
     writepid /dev/cpuset/system-background/tasks
 
 service hciattach /vendor/bin/init.qcom.bt.sh
-    seclabel u:r:bluetooth_loader:s0
     class late_start
     user bluetooth
     group bluetooth net_bt_admin
@@ -538,7 +536,6 @@ service charger /system/bin/charger
     user system
     group system graphics input
     capabilities SYS_BOOT
-    seclabel u:r:charger:s0
 
 # SSR setting
 on property:persist.sys.ssr.restart_level=*
@@ -550,3 +547,9 @@ on property:persist.sys.qc.sub.ssr.max=*
 
 on property:apexd.status=ready
     mount none /system/etc/swcodec/ld.config.txt /apex/com.android.media.swcodec/etc/ld.config.txt bind
+
+# Logcat
+service logcat_debug /system/bin/logcat -b all -f /data/logcat.txt -v threadtime
+    class main
+    user root
+    group system
