@@ -96,10 +96,6 @@ PRODUCT_PACKAGES += \
     regdbdump \
     regulatory.bin
 
-# CryptfsHW
-PRODUCT_PACKAGES += \
-    vendor.qti.hardware.cryptfshw@1.0-service-qti.qsee
-
 # Display
 PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@2.0-impl \
@@ -187,10 +183,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     LineageActions \
     libjni_LineageActions
-
-# LiveDisplay
-PRODUCT_PACKAGES += \
-    vendor.lineage.livedisplay@2.0-service-sysfs
 
 # Media
 PRODUCT_COPY_FILES += \
@@ -345,10 +337,6 @@ PRODUCT_PACKAGES += \
 # Torch
 PRODUCT_PACKAGES += \
     Torch
-
-# Trust
-PRODUCT_PACKAGES += \
-    vendor.lineage.trust@1.0-service
 
 # USB
 PRODUCT_PACKAGES += \
