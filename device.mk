@@ -100,7 +100,6 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.mapper@2.0-impl-2.1 \
     android.hardware.graphics.composer@2.1-service \
     android.hardware.memtrack@1.0-impl \
-    copybit.msm8974 \
     android.hardware.memtrack@1.0-service \
     gralloc.msm8974 \
     hwcomposer.msm8974 \
@@ -146,11 +145,6 @@ PRODUCT_PACKAGES += \
     init.qcom.usb.rc \
     init.target.rc \
     ueventd.qcom.rc
-
-# IPv6 tethering
-PRODUCT_PACKAGES += \
-    ebtables \
-    ethertypes
 
 # IRSC
 PRODUCT_COPY_FILES += \
