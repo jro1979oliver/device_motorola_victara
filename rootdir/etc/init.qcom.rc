@@ -59,6 +59,7 @@ on early-boot
     setprop qcom.audio.init complete
 
     start vendor.qseecomd
+    restart vendor.qcamerasvr
 
 on boot
     # Bluetooth

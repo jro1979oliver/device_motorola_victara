@@ -85,11 +85,8 @@ service qcamerasvr /system/vendor/bin/mm-qcamera-daemon
     user camera
     group camera system inet input graphics gps
 
-on property:init.svc.media=restarting
-    restart qcamerasvr
-
-on property:init.svc.servicemanager=restarting
-    restart qcamerasvr
+on property:init.svc.vendor.qcamerasvr=running
+    restart media
 
 service vendor.qseecomd /system/vendor/bin/qseecomd
    class core
